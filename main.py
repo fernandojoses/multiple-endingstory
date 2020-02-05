@@ -32,9 +32,9 @@ def levelone():
     if choice == "left":
 
         print("You ran over the fork, and cracked your windshield... !")
-        print("You were taken to the hospital and later died from your injuries.")
+        from colorama import Fore, Back, Style
+        print(Fore.RED + 'You were taken to the hospital and later died from your injuries.')
         playagain()
-
 
 
     elif choice == "right":
@@ -78,8 +78,9 @@ def leveltwo():
          print("You then wreck your vehicle and started a foot pursuit.")
          print("After 20 minutes of running, you give up and get caught!")
         elif choice == "give up":
-           print("You got arrested!")
-           print("You were put into jail for 23 years!") 
+           from colorama import Fore, Back, Style
+           ("You got arrested!")
+           print(Fore.RED + 'some red text')("You were put into jail for 23 years!") 
         playagain()
 
 
@@ -116,7 +117,7 @@ def levelfour():
      elif choice == "do not mind":
 
         print("You ignored her and got home safely.")
-        levelseven()
+        levelsix()
 
 
 
@@ -148,27 +149,34 @@ def leveleight():
 
 def levelsix():
 
+        print("Court day!")
+        choice = input("Should you go? (Y or N) \n")
 
-     choice = input("Should you go? (Y or N) \n")
 
 
+        if choice == "Y":
 
-     if choice == "Y":
-
-        print("The judge gave you a break")
+                print("The judge gave you a break")
         
-        print("No fines or points were added to your licence")
+                print("No fines or points were added to your licence")
         
-        print("The End!")
+                print("The End!")
 
-     elif choice == "N":
+        elif choice == "N":
 
-        print("You skipped court and the police came looking for you.")
+                print("You skipped court and the police came looking for you.")
         
-        print("They found you sleeping and took you to jail for 30 days!")
-
+                print("They found you sleeping and took you to jail for 30 days!")
+       
         print("The End!")
 levelone()
 
 def levelnine():
-        print("You decide to investiage")
+        choice = input("Should you leave ? (Y or N) \n")
+        
+        if choice =="Y":
+                print("You leave and run to the nearest police ")
+
+        elif choice =="N":
+                        print ("You found a way out but you didnt decide to take the risk, she found you seeking around and killed you!")
+                        playagain()
