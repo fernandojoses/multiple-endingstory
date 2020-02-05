@@ -16,6 +16,9 @@ def playagain():
 
 
 
+
+
+
 def levelone():
 
     print("Your journey begins here.")
@@ -44,6 +47,15 @@ def levelone():
 
 
 
+
+
+
+
+
+
+
+
+
 def leveltwo():
 
     print("You turn on your music and keep heading your way")
@@ -58,7 +70,7 @@ def leveltwo():
         levelfour()
     if choice == "keep going":
 
-        print("You start a pursuit")
+        print("You started a pursuit! Many police departments join in your pursuit.")
         print("You caused accidents and injuries...")
 
         choice = input("Should you keep driving or give up? [keep driving/give up] \n")
@@ -70,10 +82,25 @@ def leveltwo():
            print("You were put into jail for 23 years!") 
         playagain()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def levelfour():
      print("You kept driving when an old lady cut you off.")
 
-     choice = input("Should you Cut her off as well or do not mind? [cut/do not mind]  \n")
+     choice = input("Should you cut her off as well or do not mind? [cut/do not mind]  \n")
 
 
 
@@ -85,14 +112,39 @@ def levelfour():
 
         print("You got two tickets, in total of $140 dollars. Now you have to go to court!")
 
-        print("It's your court day!")
-        levelsix()
+        levelseven()
      elif choice == "do not mind":
 
         print("You ignored her and got home safely.")
-        
-        print("You ended up with just a $120 ticket.")
-        levelfive()
+        levelseven()
+
+
+
+def levelseven():
+        print("Later at night, someone ringed your doorbell..")
+
+        choice = input ("Should you open the door or ignore it? [open/ignore] \n")
+
+        if choice =="open":
+                print("It was the granny that you cut off in the highway!")
+
+                print("She knocked you out and took you to her home.")
+                leveleight()
+        elif choice == "ignore":
+                print('The knocking and sounds stopped and you slept peacefully.')
+                        
+def leveleight():
+        print("You wake up and you do not know what to do! Especially that you have court today!")
+        choice = input ("Should you investigate or stay still? [investigate/stay still]")
+
+        if choice == "investigate":
+                print("You find a way out but you arent sure if you should bail..")
+                levelnine()
+        elif choice == "stay still":
+                print("you stay still and hours later she comes in with a knife...")
+                print("She says she brought you a last meal...")
+                print("Later in the day, you pass away from food poisoning.")
+
 
 def levelsix():
 
@@ -117,3 +169,6 @@ def levelsix():
 
         print("The End!")
 levelone()
+
+def levelnine():
+        print("You decide to investiage")
