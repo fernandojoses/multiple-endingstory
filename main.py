@@ -1,3 +1,5 @@
+from colorama import Fore, Back, Style
+
 def playagain():
 
     answer = input("Play again? Y or N \n")
@@ -32,8 +34,7 @@ def levelone():
     if choice == "left":
 
         print("You ran over the fork, and cracked your windshield... !")
-        from colorama import Fore, Back, Style
-        print(Fore.RED + 'You were taken to the hospital and later died from your injuries.')
+        print(Fore.RED + 'You were taken to the hospital and later died from your injuries.'+ Fore.RESET)
         playagain()
 
 
@@ -76,12 +77,12 @@ def leveltwo():
         choice = input("Should you keep driving or give up? [keep driving/give up] \n")
         if choice == "keep driving":
          print("You then wreck your vehicle and started a foot pursuit.")
-         print("After 20 minutes of running, you give up and get caught!")
+         print(Fore.RED + 'After 20 minutes of running, you give up and get caught!' + Fore.RESET)
         elif choice == "give up":
-           from colorama import Fore, Back, Style
-           ("You got arrested!")
-           print(Fore.RED + 'some red text')("You were put into jail for 23 years!") 
+           print(Fore.RED + 'You got arrested!' + Fore.RESET)
+           print(Fore.RED + 'You were put into jail for 23 years!' + Fore.RESET) 
         playagain()
+
 
 
 
@@ -109,7 +110,7 @@ def levelfour():
 
         print("She calls the highway patrol, and gets you in trouble")
         
-        print("The cop gave you a $20 ticket.You kept driving until you got home")
+        print("The cop gave you a $20 ticket. You kept driving until you got home")
 
         print("You got two tickets, in total of $140 dollars. Now you have to go to court!")
 
@@ -129,10 +130,11 @@ def levelseven():
         if choice =="open":
                 print("It was the granny that you cut off in the highway!")
 
-                print("She knocked you out and took you to her home.")
+                print(Fore.RED + 'She knocked you out and took you to her home.' + Fore.RESET)
                 leveleight()
         elif choice == "ignore":
                 print('The knocking and sounds stopped and you slept peacefully.')
+                print('The END!')
                         
 def leveleight():
         print("You wake up and you do not know what to do! Especially that you have court today!")
@@ -140,17 +142,17 @@ def leveleight():
 
         if choice == "investigate":
                 print("You find a way out but you arent sure if you should bail..")
-                levelnine()
+                levelten()
         elif choice == "stay still":
                 print("you stay still and hours later she comes in with a knife...")
-                print("She says she brought you a last meal...")
-                print("Later in the day, you pass away from food poisoning.")
-
+                print("She puts the knife down to scare you and says she brought you a last meal...")
+                print(Fore.RED + "Later in the day, you pass away from food poisoning." + Fore.RESET)
+                playagain()
 
 def levelsix():
 
         print("Court day!")
-        choice = input("Should you go? (Y or N) \n")
+        choice = input("Should you go and solve the $120 ticket? (Y or N) \n")
 
 
 
@@ -158,7 +160,7 @@ def levelsix():
 
                 print("The judge gave you a break")
         
-                print("No fines or points were added to your licence")
+                print("No fines or points were added to your licence!")
         
                 print("The End!")
 
@@ -168,15 +170,22 @@ def levelsix():
         
                 print("They found you sleeping and took you to jail for 30 days!")
        
-        print("The End!")
-levelone()
+                print("The End!")
+                playagain()
 
-def levelnine():
+def levelten():
         choice = input("Should you leave ? (Y or N) \n")
         
         if choice =="Y":
-                print("You leave and run to the nearest police ")
-
+                print("You leave and run to the nearest police station ")
+                print(Fore.GREEN + "You made it out alive! " + Fore.RESET)
+                print(Fore.GREEN + "CONGRATS! " + Fore.RESET)
         elif choice =="N":
-                        print ("You found a way out but you didnt decide to take the risk, she found you seeking around and killed you!")
+                        print (Fore.RED + 'You found a way out but you didnt decide to take the risk, she found you seeking around and killed you!' + Fore.RESET)
                         playagain()
+
+
+
+levelone()      
+
+
