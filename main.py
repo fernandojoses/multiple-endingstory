@@ -134,8 +134,8 @@ def levelseven():
                 leveleight()
         elif choice == "ignore":
                 print('The knocking and sounds stopped and you slept peacefully.')
-                print('The END!')
-                        
+                
+                levelsix()      
 def leveleight():
         print("You wake up and you do not know what to do! Especially that you have court today!")
         choice = input ("Should you investigate or stay still? [investigate/stay still]")
@@ -152,7 +152,7 @@ def leveleight():
 def levelsix():
 
         print("Court day!")
-        choice = input("Should you go and solve the $120 ticket? (Y or N) \n")
+        choice = input("Should you go and solve the ticket/s? (Y or N) \n")
 
 
 
@@ -160,7 +160,7 @@ def levelsix():
 
                 print("The judge gave you a break")
         
-                print("No fines or points were added to your licence!")
+                print("No fines or points were added to your license!")
         
                 print("The End!")
 
