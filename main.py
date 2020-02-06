@@ -23,7 +23,7 @@ def playagain():
 
 def levelone():
 
-    print("Your journey begins here.")
+    print("Your journey begins here. You are a man called Carl that works in a busy office everyday.")
 
     print("There is a fork in the road, you are driving at night after working overtime...")
 
