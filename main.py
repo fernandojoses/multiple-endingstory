@@ -1,5 +1,6 @@
 from colorama import Fore, Back, Style
 
+
 def playagain():
 
     answer = input("Play again? Y or N \n")
@@ -19,7 +20,12 @@ def playagain():
 
 
 
+from pyfiglet import Figlet
 
+fig = Figlet(font='fuzzy')
+banner = fig.renderText("How driving home turned into a chaos!")
+
+print(banner)
 
 def levelone():
 
@@ -135,7 +141,7 @@ def levelseven():
         elif choice == "ignore":
                 print('The knocking and sounds stopped and you slept peacefully.')
                 
-                levelsix()      
+                leveleleven()      
 def leveleight():
         print("You wake up and you do not know what to do! Especially that you have court today!")
         choice = input ("Should you investigate or stay still? [investigate/stay still]")
@@ -185,7 +191,17 @@ def levelten():
                         playagain()
 
 
+def leveleleven():
+        print('Court day!')
+        choice = input ("You arrived, should get the problem fixed?   [Y / N ]\n")
 
+        if choice == "Y":
+               print(Fore.GREEN + "Awesome. Problem Solved! " + Fore.RESET)               
+               print(Fore.GREEN + "THE END! " + Fore.RESET)     
+               playagain()
+        if choice == "N":
+                print(Fore.RED + "The police made you pay and kicked you out! " + Fore.RESET)
+                playagain()
 levelone()      
 
 
