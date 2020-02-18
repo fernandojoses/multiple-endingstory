@@ -19,14 +19,6 @@ def playagain():
 
 
 
-
-from pyfiglet import Figlet
-
-fig = Figlet(font='fuzzy')
-banner = fig.renderText("How driving home turned into a chaos!")
-
-print(banner)
-
 def levelone():
 
     print("Your journey begins here. You are a man called Carl that works in a busy office everyday.")
